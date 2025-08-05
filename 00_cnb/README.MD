@@ -12,7 +12,7 @@
             password: $GITHUB_TOKEN
             branch: $CNB_BRANCH
 ```
-注意：
+注意：如果提交失败，尝试使用以下命令重试
 ```bash
 docker run --rm \
   -e PLUGIN_TARGET_URL="https://github.com/gailDev/knowage.git" \
