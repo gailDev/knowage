@@ -14,6 +14,12 @@ $:
       stages:
         - name: login_docker
           script: docker login docker.cnb.cool -u cnb -p $DOCKER_TOKEN
+  push:
+    - services:
+        - docker
+      imports: 
+        - https://cnb.cool/dreamlily/keys/-/blob/main/git_token.yml
+      stages:
         - name: sync to github
           image: tencentcom/git-sync
           settings:
